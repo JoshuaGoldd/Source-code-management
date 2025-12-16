@@ -60,6 +60,7 @@ The next stage was local version control systems such as RCS, which allowed engi
 Centralized version control systems, such as CVS and later Subversion (SVN), were introduced as software development became more collaborative.  Several developers may collaborate on the same codebase because these systems employed a central server as the sole source of truth.  They did have some significant drawbacks, though: the central server served as a single point of failure, branching and merging were difficult and slow, and developers required continuous network connectivity.
 Large, dispersed teams working on complicated projects found these restrictions particularly challenging.  As a result, distributed version control systems were developed, the most popular of which is Git.  Git enabled developers to work offline with complete project history, eliminated the need for a central server, and made branching and merging quick and dependable.
 In conclusion, source code management progressed from manual file handling to local tracking tools, centralised systems, and distributed systems like Git, which solved issues with scalability, performance, and teamwork that existed in previous solutions.
+
 2. __What were the limitations of previous version control systems (VCS) that Git aimed to address?__
 
 __Answer:__ Git was developed in direct response to certain, unpleasant shortcomings of prior version control systems, including BitKeeper, which was utilised by the Linux kernel team until 2005, and centralised systems like CVS and SVN that were previously in vogue.
@@ -142,6 +143,7 @@ __Answer:__:Git offers significant advantages for managing source code, especial
 - __Git integrates seamlessly with CI/CD pipelines:__ Git acts as the central trigger point for automation. When code is pushed to a repository, CI/CD tools automatically run tests, build the application, and deploy it if everything passes. This is similar to an assembly line where each update is automatically checked for quality before being released. This tight integration helps teams deliver software faster, with fewer errors and more consistency.
 
 2.__How does Git support distributed development teams?__
+
 __Answer:__ Git strongly supports distributed development teams by allowing developers to work independently, efficiently, and reliably regardless of location.
 
 - __Git is a version control system that is distributed:__ Every team member has a complete copy of the project and its entire history on their local machine. This is like giving every person their own full backup of a shared project folder, so work can continue even if the central server or internet connection is unavailable.\
@@ -157,6 +159,7 @@ ___
 ___
 
 1. __What are the common challenges or drawbacks developers face when using Git?__
+
 __Answer:__ While Git is a powerful tool for source code management, developers often encounter some common challenges when using it.
 
 - __Steep learning curve:__ Git has many commands and concepts such as branching, merging, rebasing, and stashing, which can be confusing for beginners. Misusing these commands can lead to mistakes like losing commits or creating messy histories. This is similar to learning to drive a complex vehicle with many gears and levers—it takes time and practice to master.
@@ -205,6 +208,7 @@ __Why DVCS like Git is preferred in certain environments:__
 - __Hospitals and healthcare systems:__ Git’s distributed design ensures developers can work offline or across multiple sites, which is valuable in secure and regulated environments. Detailed version history supports traceability and audit compliance, ensuring all code changes can be tracked and reviewed.
 
 2.__What are the specific use cases or scenarios where other VCS might be preferred over Git?__
+
 __Answer:__ While Git is highly popular and flexible, there are specific scenarios where other version control systems (VCS) might be preferred. Other VCS tools are preferred when:
 
 - Large binary files need efficient handling (Perforce)
@@ -225,7 +229,7 @@ ___
 
 __Answer:__ Git is implemented across organizations in different ways: from large-scale open-source collaboration, to enterprise CI/CD pipelines, to hybrid workflows in specialized industries. Its flexibility allows teams to tailor workflows, enforce policies, and integrate with automation tools, making it suitable for nearly any development environment.
 
-1. __What lessons can be learned from these case studies regarding successful Git adoption and management?__
+2. __What lessons can be learned from these case studies regarding successful Git adoption and management?__
 
 __Answer:__ Successful Git adoption depends on implementing structured workflows, integrating automation, enforcing collaboration practices, providing training and governance, and adapting workflows to the specific context of the project or organization. Following these principles ensures that Git delivers its full benefits in efficiency, reliability, and team productivity.
 ___
@@ -254,7 +258,9 @@ __Implementing MFA and RBAC in practice:__
 - __RBAC:__ SCM platforms allow creating teams, groups, or roles with specific permissions. For example, in GitHub, you can create teams with read-only, write, or admin access to certain repositories. Combined with branch protections, this enforces strict control over who can push or merge code.
 
 2.__What are the recommended practices for securing repositories hosted on cloud-based platforms like GitHub, GitLab, and Bitbucket, and how does encrypting repositories and using secure communication protocols (SSH vs. HTTPS) prevent unauthorized access?__
+
 __Answer:__
+
 Securing repositories hosted on cloud platforms like GitHub, GitLab, or Bitbucket is essential to protect sensitive code and prevent unauthorized access.Recommended practices include:
 
 - __Use SSH or HTTPS with strong authentication:__ Always connect to repositories using secure protocols. SSH keys provide encrypted authentication without transmitting passwords, while HTTPS with personal access tokens ensures that credentials are not exposed in plain text. This is similar to sending locked letters instead of postcards—only the intended recipient can open them.
@@ -270,6 +276,7 @@ __How SSH vs HTTPS prevents unauthorized access:__
 - __HTTPS with tokens:__ Encrypts credentials and traffic, preventing eavesdropping and credential theft. Personal access tokens are revocable, so compromised tokens can be disabled without affecting other users.
 
 3.__What are the best practices for logging and auditing in SCM to ensure that all repository activities (e.g., commits, merges, pushes) are tracked for security purposes, and how can automated alerts notify teams of suspicious changes?__
+
 __Answer:__ Logging and auditing in SCM are essential to ensure all repository activities are tracked and that the codebase remains secure and accountable. Best practices include:
 
 - __Enable detailed activity logging:__ Track every significant action—commits, merges, pushes, branch creations, and deletions. This provides a complete record of who did what and when, similar to a security camera recording every movement in a building.
@@ -295,6 +302,7 @@ ___
 ___
 
 1. __What are the emerging trends in source code management, and how is Git evolving to meet these new demands?__
+
 __Answer:__ Emerging trends in source code management (SCM) are shaping how development teams collaborate, secure, and deliver software, and Git is evolving to meet these demands.
 
 - __Cloud-based and collaborative development:__ More organizations are moving repositories to cloud platforms like GitHub, GitLab, and Bitbucket. These platforms provide real-time collaboration, issue tracking, and CI/CD integration. Git itself evolves by offering better support for large repositories, improved pull request workflows, and native integration with cloud services, enabling seamless teamwork across distributed teams.
@@ -305,6 +313,7 @@ __Answer:__ Emerging trends in source code management (SCM) are shaping how deve
 - __Enhanced observability and analytics:__ Teams now expect insights into developer activity, repository health, and code metrics. Git is evolving with better logging, audit trails, and integration with analytics tools, enabling data-driven decisions for software delivery.
   
 2. __How might advancements in DevOps, continuous integration/continuous deployment (CI/CD), and automation impact the future use of Git?__
+
 __Answer:__ Advancements in DevOps, continuous integration/continuous deployment (CI/CD), and automation are shaping how Git will be used in the future, making it more central to modern software development.
 
 - __Tighter integration with CI/CD pipelines:__ Git will increasingly serve as the trigger point for automated workflows. Every commit or pull request can automatically initiate tests, builds, security scans, and deployments. This reduces manual intervention and ensures that only high-quality, tested code reaches production. It’s like having a smart assembly line that checks and packages products automatically whenever a part is added.
