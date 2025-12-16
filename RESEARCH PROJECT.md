@@ -1,6 +1,7 @@
 # RESEARCH PROJECT
 
-### This document describes the solution derived from a structured approach to Source Code Management questions
+## This document describes the solution derived from a structured approach to Source Code Management questions
+
 ___
 
 ## Source code management research project
