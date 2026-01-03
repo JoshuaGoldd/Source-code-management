@@ -7,5 +7,5 @@ function sum(a, b, c) {
 
 // Jest test
 test("adds three numbers", () => {
-  expect(sum(2, 3, 4)).toBe(9); // 2 + 3 + 4 = 9
+  expect(sum(2, 3, 5)).toBe(10); // 2 + 3 + 5 = 10
 });
