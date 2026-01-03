@@ -15,7 +15,7 @@ __Answer:__ Git revolutionized modern software development by introducing a dist
 - __Allows  Non-linear Development:__ By working on many branches at once, developers may build features, repair bugs, and conduct independent experiments.
 - __Distributed Architecture:__ Every developer has a complete repository history, allowing offline work and reducing single-point-of-failure risks.
 - __High Performance:__ Operations like branching, merging, and committing are optimized and typically faster than centralized systems.
-- **The Pull Request (PR) Workflow: Because developers work on different branches, they can't just "overwrite" the main code.  They must submit a request to incorporate their changes.  This initiates the Code examine step, in which peers examine, discuss, and test code before it is incorporated.  This serves as a quality gate that did not exist in prior, direct-commit systems.
+- __The Pull Request (PR) Workflow:__ Because developers work on different branches, they can't just "overwrite" the main code.  They must submit a request to incorporate their changes.  This initiates the Code examine step, in which peers examine, discuss, and test code before it is incorporated.  This serves as a quality gate that did not exist in prior, direct-commit systems.
 - __The Pull Request (PR) Workflow:__ Because developers work on different branches, they can't just "overwrite" the main code.  They must submit a request to incorporate their changes.  This initiates the Code examine step, in which peers examine, discuss, and test code before it is incorporated.  This serves as a quality gate that did not exist in prior, direct-commit systems.
 
 ### Key Advantages Compared to Other version control system(like SVN AND CVS)
@@ -93,10 +93,8 @@ __Git's Solution:__ Embraces non-linear history with tools like interactive reba
 __Problem:__ CVS didn’t track file renames at all; SVN tracked them but sometimes poorly. This could break history tracking.
 __Git's Solution:__ Tracks content, not files. It uses heuristics to detect renames during merges and diffs, preserving continuity more intelligently.
 
-Previous VCS were built around the concept of "version control as a shared filing cabinet.Git shifted to version control as a distributed graph of project snapshots.This allowed
-Local experimentation without fear, Peer-to-peer collaboration (not just hub-and-spoke),Workflow flexibility (GitFlow, GitHub Flow, etc.)
-Linus Torvalds summed up the motivation succinctly: He needed a system that was:
-Distributed,Fast, Secure (data integrity), Able to handle massive projects (like the kernel), Free and open source.
+Previous VCS were built around the concept of "version control as a shared filing cabinet.Git shifted to version control as a distributed graph of project snapshots.This allowed Local experimentation without fear, Peer-to-peer collaboration (not just hub-and-spoke),Workflow flexibility (GitFlow, GitHub Flow, etc.).
+Linus Torvalds summed up the motivation succinctly: He needed a system that was distributed,Fast, Secure (data integrity), Able to handle massive projects (like the kernel), Free and open source.
 
 ___
 
@@ -106,7 +104,7 @@ ___
 
 1. __What are the primary features of Git that differentiate it from other VCS tools?__
 
-__Answer:__:Git stands out from other version control systems because of several core features that make it faster, safer, and more flexible for modern software development.
+__Answer:__ Git stands out from other version control systems because of several core features that make it faster, safer, and more flexible for modern software development.
 
 - __Git is a distributed version control system__:Git provides each developer with a full copy of the project history on their local computer, in contrast to earlier technologies that depend on a single central server.  This allows work to continue even in the event that the main server is down, much like when each team member has a complete backup of a shared document.
 - __Git offers fast performance because most operations are done locally:__ Actions such as committing changes, viewing history, or switching branches do not require an internet connection. This is similar to working on files stored on your computer instead of waiting for data to load from a remote drive.
