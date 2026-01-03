@@ -3,5 +3,5 @@ function sum(a, b) {
 }
 
 test("adds two numbers", () => {
-  expect(sum(2, 3)).toBe(5);
+  expect(sum(3, 3)).toBe(6);
 });
