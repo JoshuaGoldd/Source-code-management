@@ -3,13 +3,13 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - main
+      - master
       - ci-setup
       - ci/integration-tests
       - feature-*
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   build-test-deploy:
