@@ -1,38 +1,33 @@
-name: CI/CD Pipeline
+name: CI Pipeline
 
 on:
   push:
-    branches:
-      - master
-      - ci-setup
-      - ci/integration-tests
-      - feature-*
+    branches: [ master, ci-setup, ci/integration-tests ]
   pull_request:
-    branches:
-      - master
+    branches: [ master ]
 
 jobs:
-  build-test-deploy:
+  lint-test-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: '20'
 
       - name: Install dependencies
-        run: npm install
-
-      - name: Run tests
-        run: npm test
+        run: npm ci
 
       - name: Run ESLint
         run: npm run lint
 
-      - name: Deploy (simulated)
-        run: echo "Deploying to staging environment"
+      - name: Run Tests
+        run: npm test
 
+      - name: Deploy to staging
+        if: success()
+        run: echo "✅ Code passed checks. Deploying to staging..."
