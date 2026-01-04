@@ -16,23 +16,29 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1️⃣ Checkout code
       - name: Checkout code
         uses: actions/checkout@v3
 
+      # 2️⃣ Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
+      # 3️⃣ Install dependencies (reproducible)
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
-      - name: Run tests
-        run: npm test
-
+      # 4️⃣ Run ESLint first
       - name: Run ESLint
         run: npm run lint
 
-      - name: Deploy (simulated)
-        run: echo "Deploying to staging environment"
+      # 5️⃣ Run tests
+      - name: Run tests
+        run: npx jest
 
+      # 6️⃣ Deploy (simulated)
+      - name: Deploy to staging
+        if: success()
+        run: echo "✅ Code passed checks. Deploying to staging..."
