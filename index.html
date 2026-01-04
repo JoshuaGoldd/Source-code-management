@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+    }
+    .login-form {
+      background: #fff;
+      padding: 20px 30px;
+      border-radius: 8px;
+      box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+      width: 300px;
+    }
+    .login-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .login-form input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    .login-form button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .login-form button:hover {
+      background-color: #0056b3;
+    }
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <form class="login-form" id="loginForm">
+    <h2>Login</h2>
+
+    <div class="error" id="errorMsg"></div>
+
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button type="submit">Login</button>
+  </form>
+
+  <script>
+    const loginForm = document.getElementById('loginForm');
+    const errorMsg = document.getElementById('errorMsg');
+
+    loginForm.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form from submitting
+
+      // Get input values
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value.trim();
+
+      // Clear previous error
+      errorMsg.textContent = '';
+
+      // Simple validation
+      if (username === '' || password === '') {
+        errorMsg.textContent = 'Both fields are required.';
+        return;
+      }
+
+      if (password.length < 6) {
+        errorMsg.textContent = 'Password must be at least 6 characters.';
+        return;
+      }
+
+      // If validation passes
+      alert('Login successful!\nUsername: ' + username);
+      loginForm.reset(); // Optional: clear the form
+    });
+  </script>
+
+</body>
+</html>
