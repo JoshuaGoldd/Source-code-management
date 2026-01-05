@@ -1,4 +1,4 @@
-# CI/CD Pipeline Implementation Report Using GitHub Actions
+# Automated code quality and deployment
 
 ___
 
@@ -15,10 +15,30 @@ ___
 - Jest – Unit testing
 - ESLint – Code quality and linting
 - Git & GitHub – Source code management
+- GitHub Pages – Staging deployment environment
 
-___
+For this Task i used GitHub Actions to automate testing, code quality checks, and deployment. It covers the following:
 
-GitHub Pages – Staging deployment environment
+- Running automated tests
+- Checking code quality using ESLint
+- Deploying to GitHub Pages when checks pass
+
+### When is it triggered?
+
+- On every push to any branch starting with `feature-`.
+
+### What does it do?
+
+1. **Checks out the code.**
+2. **Runs unit tests (simulated).**
+3. **Checks code quality (simulated).**
+4. **If all pass, deploys to a staging environment (simulated).**
+
+### How to use
+
+- Create a feature branch: `git checkout -b feature-login-page`
+- Push to GitHub: `git push origin feature-login-page`
+- GitHub Actions will take over.
 
 ___
 
@@ -184,7 +204,7 @@ Once this file was committed, GitHub Actions became active automatically.
 
 ![screenshot](../Images/SCM-2.png)
 
----
+___
 
 ## Step 6: Branching and Daily Development Workflow
 
@@ -201,7 +221,7 @@ Each push triggered the CI/CD pipeline automatically, without any manual action 
 
 ![screenshot](../Images/SCM-5.png)
 
----
+___
 
 ## Step 7: Pull Requests and Controlled Merging
 
@@ -216,7 +236,8 @@ To merge changes into the `master` branch, I followed this workflow:
 This process prevented broken or untested code from entering `master`.
 
 ![screenshot](../Images/SCM-4.png)
----
+
+___
 
 ## Step 8: Deploying to Staging Using GitHub Pages
 
@@ -239,7 +260,7 @@ To resolve this, I added a minimal index.html file with some simple content to t
 
 ![screenshot](../Images/SCM-6.png)
 
----
+___
 
 ## Results and Key Outcomes
 
@@ -249,10 +270,10 @@ To resolve this, I added a minimal index.html file with some simple content to t
 * I deployed to GitHub Pages as a staging environment
 * I built a CI/CD pipeline that is easy to reproduce and maintain
 
----
+___
 
 ## Conclusion
 
 By starting from repository creation and gradually introducing automation, I built a CI/CD pipeline that is simple, reliable, and stress-free to use. Every step is automated, and every change is validated before deployment, aligning with real-world DevOps best practices.
 
----
+___
