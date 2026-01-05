@@ -1,4 +1,4 @@
-# Task 2: Git Workflow Implementation for a Team Project
+# Git Workflow Implementation for a Team Project
 
 ## Introduction
 
@@ -16,7 +16,7 @@ I structured the repository using clearly defined branches, each with a specific
 
 | Branch    | Purpose                                                 |
 | --------- | ------------------------------------------------------- |
-| `main/master`    | Contains production-ready code only |
+| `main/master` | Contains production-ready code only |
 | `develop` | Serves as the integration branch for completed features |
 
 I ensured that **no direct commits** were made to the `main/master` branch. All changes were introduced through pull requests after testing and review.
