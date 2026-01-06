@@ -1,2 +1,2 @@
 This document contains the authentication and updated file script
-updated user-profile script
+updated user-profile script and updated authentication  script
